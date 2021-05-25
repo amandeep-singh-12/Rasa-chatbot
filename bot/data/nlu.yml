@@ -100,3 +100,32 @@ nlu:
    - can you tell me about coders trek
    - what is this platform?
    - about this platform
+   - what is this site about
+   - about this site
+
+- intent: tell_name
+  examples: |
+    - tell me about yourself
+    - what is your name? 
+    - tell me your name
+    - what others call you?
+    - what should I call you?
+
+- intent: asking_name
+  examples: |
+    - My name is [Amandeep]{"entity" : "name", "value" : "Amandeep"}
+    - my name is [Aaditya]{"entity" : "name", "value" : "Aaditya"}
+    - My name is [abhay]{"entity" : "name", "value" : "abhay"}
+    - my name is [ayush]{"entity" : "name", "value" : "ayush"}
+    - I am [Mayank]{"entity" : "name", "value" : "Mayank"}
+    - I am [mayank]{"entity" : "name", "value" : "mayank"}
+    - [Akshita]{"entity" : "name", "value" : "Akshita"} this side
+    - [akshita]{"entity" : "name", "value" : "akshita"} this side
+    - this is [zen]{"entity" : "name", "value" : "zen"}
+    - this is [Rashi]{"entity" : "name", "value" : "Rashi"}
+    - its [Amandeep]{"entity" : "name", "value" : "Amandeep"} here
+    - its [nargis]{"entity" : "name", "value" : "nargis"} here
+    - [aadi]{"entity" : "name", "value" : "aadi"} here
+    - [Aadi]{"entity" : "name", "value" : "Aadi"} here
+    - [Pinki]{"entity" : "name", "value" : "Pinki"}
+    - [mamta]{"entity" : "name", "value" : "mamta"}

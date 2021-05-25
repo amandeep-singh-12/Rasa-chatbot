@@ -9,11 +9,21 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - tell_name
+  - asking_name:
+      use_entities:
+        - name
 
+entities:
+  - name
+
+slots:
+  name:
+    type: text
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey coder! How are you?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -29,15 +39,20 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot, made by coders trek team and I am here to help you."
 
   utter_coders_trek_intro:
-   - text: "Coders Trek is a application that works for you and your team to help you catch up your progress 
-   in your programming trek and help you team up and show detailed analytics. So Start your Trek right now 
-   using our user friendly service and get to know about your hidden programming power and earn different 
-   rewards by compete with your friends and make progress by taking up challenges with other teams which are 
-   on trek with you."
+  - text: "Coders Trek is a application that works for you and your team to help you catch up your progress 
+   in your programming journey."
+  
+  utter_name:
+  - text: "My developing team gives me name Codebot and I like it!"
+  
+  utter_ask_name:
+  - text: "What is your name?"
 
+  utter_thanks:
+    - text: "Thank You"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
