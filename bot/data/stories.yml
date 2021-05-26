@@ -36,16 +36,16 @@ stories:
   - intent: coders_trek_intro
   - action: utter_coders_trek_intro
 
-- story: name path 
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: tell_name
-  - action: utter_name
-  - action: utter_ask_name
-  - intent: asking_name
-    entities:
-    - name: "aman"
-  - slot_was_set:
-    - name: "aman"
-  - action: utter_thanks
+#- story: name path 
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: tell_name
+#  - action: utter_name
+#  - action: utter_ask_name
+#  - intent: asking_name
+#    entities:
+#    - name: "aman"
+#  - slot_was_set:
+#    - name: "aman"
+#  - action: utter_thanks

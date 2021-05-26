@@ -53,6 +53,19 @@ responses:
 
   utter_thanks:
     - text: "Thank You"
+
+actions:
+  - action_submit
+
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+
+utter_details_thanks:
+  - text: "Thanks for providing the below details \nName: {Name}"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
