@@ -54,17 +54,20 @@ responses:
   utter_thanks:
     - text: "Thank You"
 
+
+  utter_details_thanks:
+  - text: "Thanks for providing the below details \nName: {name}"
+
 actions:
   - action_submit
-
+  - utter_details_thanks
 forms:
   user_details_form:
     name:
       - type: from_entity
         entity: name
 
-utter_details_thanks:
-  - text: "Thanks for providing the below details \nName: {Name}"
+
 
 session_config:
   session_expiration_time: 60

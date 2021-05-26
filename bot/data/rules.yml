@@ -19,6 +19,7 @@ rules:
   - action: user_details_form
   - active_loop: user_details_form
 
+
 - rule: Submit form
   condition:
   - active_loop: user_details_form
@@ -29,3 +30,4 @@ rules:
     - requested_slot: null
 
   - action: action_submit
+  - action: utter_details_thanks
