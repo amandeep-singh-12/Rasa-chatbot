@@ -12,6 +12,7 @@ intents:
   - tell_name
   - play_video
   - how_are_you
+  - out_of_scope
   - asking_name:
       use_entities:
         - name
@@ -61,6 +62,10 @@ responses:
 
   utter_details_thanks:
   - text: "Thanks for providing the below details \nName: {name}"
+
+
+  utter_out_of_scope:
+    - text: "Sorry, I didn't get what you just said. Please rephrase your line!'"
 
 actions:
   - action_submit

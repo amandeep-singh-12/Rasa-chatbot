@@ -146,3 +146,11 @@ nlu:
     - open the video
     - show me some videos
     - open the video in browser
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is temperature?
+    - what is 2 + 2?
+    - who is US president?
+    - Who is Indian prime minister?
