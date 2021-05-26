@@ -103,6 +103,15 @@ nlu:
    - what is this site about
    - about this site
 
+- intent: how_are_you
+  examples: |
+    - How are you?
+    - am good what about you
+    - what's up there?
+    - whats up
+    - what is up?
+    - are you doing good?
+
 - intent: tell_name
   examples: |
     - tell me about yourself
@@ -129,3 +138,11 @@ nlu:
     - [Aadi]{"entity" : "name", "value" : "Aadi"} here
     - [Pinki]{"entity" : "name", "value" : "Pinki"}
     - [mamta]{"entity" : "name", "value" : "mamta"}
+
+- intent: play_video
+  examples: |
+    - play the video
+    - play the mentioned video
+    - open the video
+    - show me some videos
+    - open the video in browser

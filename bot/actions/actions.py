@@ -32,6 +32,20 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.events import SlotSet, EventType
 from rasa_sdk.executor import CollectingDispatcher
+import webbrowser
+
+
+
+class ActionVideo(Action):
+    def name(self) -> Text:
+        return "action_video"
+
+
+    async def run(self, dispatcher, tracker: Tracker, domain: "DomainDict") -> List[Dict[Text, Any]]:
+        video_url = "https://youtu.be/HIj8wU_rGIU"
+        dispatcher.utter_message("wait... playing your video")
+        webbrowser.open(video_url)
+        return []
 
 
 class ValidateResponse(Action):

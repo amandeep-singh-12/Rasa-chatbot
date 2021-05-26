@@ -10,6 +10,8 @@ intents:
   - mood_unhappy
   - bot_challenge
   - tell_name
+  - play_video
+  - how_are_you
   - asking_name:
       use_entities:
         - name
@@ -54,13 +56,16 @@ responses:
   utter_thanks:
     - text: "Thank You"
 
+  utter_you_are_good:
+  - text: "I am doing good"
 
   utter_details_thanks:
   - text: "Thanks for providing the below details \nName: {name}"
 
 actions:
   - action_submit
-  - utter_details_thanks
+  - action_video
+
 forms:
   user_details_form:
     name:

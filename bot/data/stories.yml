@@ -49,3 +49,15 @@ stories:
 #  - slot_was_set:
 #    - name: "aman"
 #  - action: utter_thanks
+
+- story: happy path 3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: how_are_you
+  - action: utter_you_are_good
+
+- story: happy play video path
+  steps:
+    - intent: play_video
+    - action: action_video
