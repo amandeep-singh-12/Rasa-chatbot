@@ -30,8 +30,7 @@ rules:
     - requested_slot: null
 
   - action: action_submit
-  - action: utter_details_thanks
-
+  
 
 - rule: out-of-scope
   steps:

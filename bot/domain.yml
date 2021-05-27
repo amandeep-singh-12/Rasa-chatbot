@@ -16,12 +16,17 @@ intents:
   - asking_name:
       use_entities:
         - name
+  - asking_email:
+      use_entities:
+        - email
 
 entities:
   - name
 
 slots:
   name:
+    type: text
+  email: 
     type: text
 
 responses:
@@ -37,6 +42,9 @@ responses:
 
   utter_happy:
   - text: "Great, carry on!"
+ 
+  utter_sorry:
+    - text: "I am sorry!"
 
   utter_goodbye:
   - text: "Bye"
@@ -49,10 +57,13 @@ responses:
    in your programming journey."
   
   utter_name:
-  - text: "My developing team gives me name Codebot and I like it!"
+  - text: "My developing team gives me name Codebot!"
   
   utter_ask_name:
-  - text: "What is your name?"
+  - text: "May I know your name please?"
+
+  utter_ask_email:
+    - text: "What's your email address?"
 
   utter_thanks:
     - text: "Thank You"
@@ -61,7 +72,7 @@ responses:
   - text: "I am doing good"
 
   utter_details_thanks:
-  - text: "Thanks for providing the below details \nName: {name}"
+  - text: "Thanks for providing the below details \nName: {name} \nEmail: {email}"
 
 
   utter_out_of_scope:
@@ -76,6 +87,9 @@ forms:
     name:
       - type: from_entity
         entity: name
+    email:
+      - type: from_entity
+        entity: email
 
 
 

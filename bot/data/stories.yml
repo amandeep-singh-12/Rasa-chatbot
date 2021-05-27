@@ -27,7 +27,7 @@ stories:
   - action: utter_cheer_up
   - action: utter_did_that_help
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_sorry
 
 - story: happy path 2
   steps:

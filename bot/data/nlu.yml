@@ -139,6 +139,14 @@ nlu:
     - [Pinki]{"entity" : "name", "value" : "Pinki"}
     - [mamta]{"entity" : "name", "value" : "mamta"}
 
+- intent: asking_email
+  examples: |
+    - My email is [acbs@gmail.com]{"entity" : "email", "value" : "acbs@gmail.com"}
+    - [aadityasinghal@jmit.ac.in]{"entity" : "email", "value" : "aadityasinghal@jmit.ac.in"}
+    - my email is [xyz11187@gmail.com]{"entity" : "email", "value" : "xyz11187@gmail.com"}
+    - my email account is [something9042@yahoo.com]{"entity" : "email", "value" : "something9042@yahoo.com"}
+
+
 - intent: play_video
   examples: |
     - play the video
@@ -154,3 +162,5 @@ nlu:
     - what is 2 + 2?
     - who is US president?
     - Who is Indian prime minister?
+
+

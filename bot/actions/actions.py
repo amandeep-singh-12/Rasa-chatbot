@@ -55,7 +55,7 @@ class ValidateResponse(Action):
     def run(
         self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
      ) -> List[EventType]:
-        required_slots = ["name"]
+        required_slots = ["name", "email"]
 
         for slot_name in required_slots:
             if tracker.slot.get(slot_name) is None:
@@ -69,4 +69,4 @@ class ActionSubmit(Action):
         return "action_submit"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: "DomainDict") -> List[Dict[Text, Any]]:
-        dispatcher.utter_message(template= "utter_details_thanks", Name = tracker.get_slot("name"))
+        dispatcher.utter_message(template= "utter_details_thanks", Name = tracker.get_slot("name"), Email = tracker.get_slot("email"))
