@@ -16,7 +16,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - ask_help
 - intent: goodbye
   examples: |
     - good afternoon
@@ -50,47 +50,6 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
 - intent: coders_trek_intro
   examples: |
    - what is coders trek?
@@ -123,7 +82,7 @@ nlu:
 - intent: asking_name
   examples: |
     - My name is [Amandeep]{"entity" : "name", "value" : "Amandeep"}
-    - my name is [Aaditya]{"entity" : "name", "value" : "Aaditya"}
+    - my name is [Gopi]{"entity" : "name", "value" : "Gopi"}
     - My name is [abhay]{"entity" : "name", "value" : "abhay"}
     - my name is [ayush]{"entity" : "name", "value" : "ayush"}
     - I am [Mayank]{"entity" : "name", "value" : "Mayank"}
@@ -135,7 +94,7 @@ nlu:
     - its [Amandeep]{"entity" : "name", "value" : "Amandeep"} here
     - its [nargis]{"entity" : "name", "value" : "nargis"} here
     - [aadi]{"entity" : "name", "value" : "aadi"} here
-    - [Aadi]{"entity" : "name", "value" : "Aadi"} here
+    - [Aadil]{"entity" : "name", "value" : "Aadil"} here
     - [Pinki]{"entity" : "name", "value" : "Pinki"}
     - [mamta]{"entity" : "name", "value" : "mamta"}
 
@@ -147,14 +106,6 @@ nlu:
     - my email account is [something9042@yahoo.com]{"entity" : "email", "value" : "something9042@yahoo.com"}
 
 
-- intent: play_video
-  examples: |
-    - play the video
-    - play the mentioned video
-    - open the video
-    - show me some videos
-    - open the video in browser
-
 - intent: out_of_scope
   examples: |
     - I want to order food
@@ -162,5 +113,86 @@ nlu:
     - what is 2 + 2?
     - who is US president?
     - Who is Indian prime minister?
+    - please help with my ice cream it's dripping
+    - no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
+    - i want a non dripping ice cream
+    - someone call the police i think the bot died
+    - show me a picture of a chicken
+    - neither
+    - I want french cuisine
+    - i am hungry
+    - restaurant
+    - can i be shown a gluten free restaurant
+    - i don't care!!!!
+    - i do not care how are you
+    - again?
+    - oh wait i gave you my work email address can i change it?
+    - hang on let me find it
+    - stop it, i do not care!!!
+    - how come?
+    - I changed my mind
+    - what?
+    - did i break you
+    - that link doesn't work!
+    - you already have that
+    - this is a really frustrating experience
+    - no stop
+    - give me food
+    - i want food
+    - Can I ask you questions first?
+    - is it a wasteland full of broken robot parts?
+    - can we keep chatting?
+    - talk to me
+    - who is your favourite robot?
+    - can you help me to build a bot
+    - a wood chuck can't chuck any kind of wood
+    - a wood chuck can't chuck wood
+    - are you wearing anything?
+    - can i arrange a taxi?
+    - can i book a taxi?
+    - can i order a pizza?
+    - give quiche a chance
+    - how much wood could a wood chuck chuck if a wood chuck would chuck wood?
+    - i am heavy weapons guy and this is my weapon
+    - i know kung-fu
+    - i need a taxi
+    - i want a pepperoni pizza
+    - i want to order a pizza
+    - i'd like a pizza please
+    - i'm all out of bubblegum
+    - i'm asking you to marry me
+    - it's an albany expression
+    - marry me
+    - now i have a machine gun ho-ho-ho!
+    - please marry me
+    - tell me what you're wearing?
+    - trial by stone!
+    - what are you wearing?
+    - will you marry me?
+    - you come to me on the day of my daughter's wedding
+    - you don't win friends with salad
+    - you're going to need a bigger boat
+    - fuck you
+    - oh my god
 
+- intent: ask_help
+  examples: |
+    - Can you assist me with this?
+    - I need your help on this issue
+    - I have a problem, can you look into this
+    - HELP 
+    - Help me
+    
+- intent: how_to_start_coding
+  examples: |
+    - How to start coding?
+    - play the coding start video
+    - show me some coding videos
+    - help me to start coding
 
+- intent: send_email
+  examples: |
+    - send an email
+    - I want to send an email
+    - send mail to
+    - email
