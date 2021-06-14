@@ -6,19 +6,15 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
   - tell_name
-  - play_video
+  - how_to_start_coding
   - how_are_you
   - out_of_scope
+  - ask_help
+  - send_email
   - asking_name:
       use_entities:
         - name
-  - asking_email:
-      use_entities:
-        - email
 
 entities:
   - name
@@ -26,72 +22,85 @@ entities:
 slots:
   name:
     type: text
-  email: 
+  email:
+    type: text
+  subject:
+    type: text
+  message:
     type: text
 
 responses:
   utter_greet:
-  - text: "Hey coder! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Hey coder! How are you?"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
- 
+    - text: "Great, carry on!"
+
   utter_sorry:
     - text: "I am sorry!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, made by coders trek team and I am here to help you."
+    - text: "I am a bot, made by coders trek team."
 
   utter_coders_trek_intro:
-  - text: "Coders Trek is a application that works for you and your team to help you catch up your progress 
-   in your programming journey."
-  
-  utter_name:
-  - text: "My developing team gives me name Codebot!"
-  
-  utter_ask_name:
-  - text: "May I know your name please?"
+    - text: "Coders Trek is a application that works for you and your team to help you catch up your progress in your programming journey."
 
-  utter_ask_email:
-    - text: "What's your email address?"
+  utter_name:
+    - text: "My developing team gives me name Trekbot!"
+
+  utter_ask_name:
+    - text: "May I know your name please?"
+
+  utter_username_and_welcome:
+    - text: "Hello {name}, \nWelcome to  Coderstrek, How may I help you?"
 
   utter_thanks:
     - text: "Thank You"
 
   utter_you_are_good:
-  - text: "I am doing good"
+    - text: "I am doing good"
 
-  utter_details_thanks:
-  - text: "Thanks for providing the below details \nName: {name} \nEmail: {email}"
+  utter_ask_email:
+    - text: "Please provide the e-mail ID to whom you want to send(use coderstrek@gmail.com)"
 
+  utter_ask_subject:
+    - text: "Please provide the subject for your e-mail."
+
+  utter_ask_message:
+    - text: "Please provide the message for your e-mail"
 
   utter_out_of_scope:
-    - text: "Sorry, I didn't get what you just said. Please rephrase your line!'"
+    - text: "Sorry, I am not made for this. Please rephrase your line or if you need help try saying HELP!'"
+
+  utter_ask_help:
+    - text: "How can I help you? \n For now, I can help you with the following:
+        1) I can give you a brife about this platform.
+        2) I can take you to Dashboard.
+        3) I can help you with your password reset.
+        4) I can help you with how to start coding.
+        Currently, I am in developing stage and my team is working on me.
+        If you still have any problem you can email us(coderstrek@gmail.com). Try saying
+        write an email."
 
 actions:
-  - action_submit
   - action_video
+  - action_submit
 
 forms:
-  user_details_form:
-    name:
-      - type: from_entity
-        entity: name
-    email:
-      - type: from_entity
-        entity: email
-
-
+  email_form:
+    required_slots:
+      email:
+        - type: from_text
+      subject:
+        - type: from_text
+      message:
+        - type: from_text
 
 session_config:
   session_expiration_time: 60
