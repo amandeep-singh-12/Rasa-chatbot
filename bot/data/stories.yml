@@ -6,28 +6,9 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_sorry
+
 
 - story: happy path 2
   steps:
@@ -36,19 +17,7 @@ stories:
   - intent: coders_trek_intro
   - action: utter_coders_trek_intro
 
-#- story: name path 
-#  steps:
-#  - intent: greet
-#  - action: utter_greet
-#  - intent: tell_name
-#  - action: utter_name
-#  - action: utter_ask_name
-#  - intent: asking_name
-#    entities:
-#    - name: "aman"
-#  - slot_was_set:
-#    - name: "aman"
-#  - action: utter_thanks
+
 
 - story: happy path 3
   steps:
@@ -59,5 +28,33 @@ stories:
 
 - story: happy play video path
   steps:
-    - intent: play_video
+    - intent: how_to_start_coding
     - action: action_video
+
+
+- story: help path 1
+  steps:
+
+    - intent: ask_help
+    - action: utter_ask_help
+    - intent: coders_trek_intro
+    - action: utter_coders_trek_intro
+
+- story: happy path 2
+  steps:
+      - intent: tell_name
+      - action: utter_name
+      - action: utter_ask_name
+      - intent: asking_name
+        entities:
+          - name: "Amandeep"
+      - slot_was_set:
+        - name: "Amandeep"
+      - action: utter_username_and_welcome
+
+#- story: email path
+#  steps:
+#    - intent: ask_help
+#    - action: utter_ask_help
+#    - intent: send_email
+#    - action: action_submit
